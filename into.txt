@@ -1,0 +1,13 @@
+# Yey! Introduction to React-Js
+
+# What is it?
+> It is an open source Js library for building dynamic user interface.
+> Maintained by Facebook, Instagram and a group of private devs
+
+# Merits of React
+> Design simple declarative views for each state of your app 
+> Encapsulated components
+> Dynamic properties & state
+> Virtual DOM 
+> Completely independent of the rest of your app 
+> Can render on the client or server 
