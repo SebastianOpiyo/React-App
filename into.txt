@@ -11,3 +11,19 @@
 > Virtual DOM 
 > Completely independent of the rest of your app 
 > Can render on the client or server 
+
+
+# JSX - JavaScript Syntax Extension
+- Is a preprocessor step that adds XML syntax to JSX
+- Defines a familiar syntax for defining tree structure with attributes
+- Is not required but maked things much easier.
+
+# Tut Breakdown
+> How to create a react app 
+> Create components
+> Manage state and properties 
+> Handle events
+> Work with forms and input
+> Work with JSX
+> Lifecycle methods
+> Fetch data from an API
