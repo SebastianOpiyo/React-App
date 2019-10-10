@@ -11,6 +11,8 @@
 > Virtual DOM 
 > Completely independent of the rest of your app 
 > Can render on the client or server 
+> Can create much more interactive UIs 
+> Can Easily work with teams.
 
 
 # JSX - JavaScript Syntax Extension
