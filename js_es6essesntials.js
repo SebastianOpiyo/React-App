@@ -54,3 +54,72 @@ const [nm,ml, ...rest] = [1, 3, 5, 6, 10];
 //     // we do not need to deconstruct here.
 // }
 
+// Higher Order Functions
+
+var animals = [
+    {name: 'Oodoo', species: 'carasco'},
+    {name: 'Oslo', species: 'dubious'},
+    {name: 'Olka', species: 'Soldier'},
+    {name: 'Fallen', species: 'Soldier'},
+    {name: 'Octopus', species: 'marvel'}
+]
+
+/*
+var soldier = animals.filter(function(animals){
+    return animals.species === 'Soldier';
+})
+*/
+// console.log(soldier); // the filter function returns a list of the filtered elems
+
+// the below function only checks whether an animal is a soldier.
+var soldier = function(animals){
+    return animals.species === 'Soldier';
+};
+
+var isSold = animals.filter(soldier);
+
+// var notSolder = animals.reject(soldier); // does the opposite of filter function
+// 'reject' not working.
+// console.log(isSold);
+// console.log(notSolder);
+
+// Using map function
+
+/*
+let animNames = animals.map(function(animal) {
+    return animal.name;
+})
+*/
+
+//  rewrite the above code using arrow functions
+// this is even more elegant.
+let animNames = animals.map((animal)=>animal.name);
+// console.log(animNames);
+
+
+// REDUCE FUNCTION
+// reduce is a super list transformation function.
+
+let orders = [
+    {amount:250},
+    {amount:400},
+    {amount:560},
+    {amount:230}
+]
+
+// using the normal for-loop function to get the total
+// let totalAmt=0;
+// for(var i = 0; i < orders.length; i++) {
+//  totalAmt += orders[i].amount;
+// }
+
+// console.log(totalAmt);
+
+// using REDUCE function to do the same.
+
+let totalAmt = orders.reduce(function(sum, order) {
+    console.log(sum, order);  // the iteration will take an amt from the order and add to sum increamentally
+    return sum + order.amount;
+}, 0); // we set the initial value i.e sum to 0
+
+console.log("The total amount is: " + totalAmt);
