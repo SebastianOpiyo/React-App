@@ -1,0 +1,11 @@
+# Short notes on react.
+
+# --> Components are created with 'React.createClass()' 
+# --> render() method produces the real ouput and is always placed at the very end.
+# --> JSX is in play bcs the return value has to be in parenthesis.
+# --> the 'class' attr is discouraged, instead use className
+# --> JS expressions used as attr val must be enclosed in curly braces.
+# --> it is always good to set initial values for the state
+# --> Components pass properties to their children Components through the use of 'props' or properties.
+# --> Note: props should never be used to determine the state of Components.
+# --> 
