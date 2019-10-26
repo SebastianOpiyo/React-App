@@ -1,0 +1,71 @@
+## Default export
+- When we do a default export, we can import the export with whatever name we wish to.
+- Props are immutable.
+
+## State.
+- state is only introduced to a class-based component.
+- check the link to familiarise self with classes on scrimba 
+// https://scrimba.com/p/p4Mrt9/cQnMDH
+
+// Example of state initialization.
+class App extends React.Component {
+    constructor() {
+        super() 					// we call super to inherit goodies from the parent class
+        this.state = {				// We intialize state here.			
+            answer: "Yes"
+        }
+    }
+    
+    render() {
+        return (
+            <div>
+                <h1>Is state important to know? {this.state.answer}</h1>
+            </div>
+        )
+    }
+}
+
+
+## Conditional Rendering.
+
+
+## Changing state
+
+import React from "react"
+
+class App extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            count: 0
+        }
+
+        // => below we have to bind the function we created to the class, otherwise it will not work
+        // => we do that within the constrictor
+        // => this refers to the class
+
+        this.handleClick = this.handleClick.bind(this)
+    }
+    
+    handleClick() {
+    // => we use setState method (inherited from React.Component) to change the state.
+    // => `prevState` is an object carrying the previous value alternatively we can just return an object.
+        this.setState(prevState => {
+            return {
+                count: prevState.count + 1
+            }
+        })
+    }
+    
+    render() {
+        return (
+            <div>
+                <h1>{this.state.count}</h1>
+                // => we have to use "this" to refer to the function just created.
+                <button onClick={this.handleClick}>Change!</button>
+            </div>
+        )
+    }
+}
+
+export default App
