@@ -4,7 +4,15 @@
 
 ## State.
 - state is only introduced to a class-based component.
+- The only place where you can assign this.state is the constructor.
 - check the link to familiarise self with classes on scrimba 
+- state cannot be changed directly: i.e. 
+// Wrong
+this.state.comment = 'Hello';
+
+// Correct
+this.setState({comment: 'Hello'}); // here we use setState() method to alter the state.
+
 // https://scrimba.com/p/p4Mrt9/cQnMDH
 
 // Example of state initialization.
